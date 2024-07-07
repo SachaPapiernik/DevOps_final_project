@@ -1,6 +1,6 @@
-# Terraform GCP Infrastructure
+# Terraform GCP Infrastructure for API Deployment
 
-This Terraform project sets up a basic Google Cloud Platform (GCP) infrastructure, including a static IP address, a compute instance, and a firewall rule to allow HTTP and HTTPS traffic.
+This Terraform project sets up a basic Google Cloud Platform (GCP) infrastructure to deploy an API. It includes the provisioning of a static IP address, a compute instance running your API, and a firewall rule to allow HTTP and HTTPS traffic.
 
 ## Prerequisites
 
@@ -28,7 +28,11 @@ Before you begin, ensure you have the following installed:
     startup_script   = "path/to/your-startup-script.sh"
     ```
 
-3. **Initialize Terraform:**
+3. **Prepare your startup script:**
+
+    Ensure your `startup_script.sh` sets up and starts your API. This script will be executed on the compute instance during boot.
+
+4. **Initialize Terraform:**
 
     Initialize the Terraform configuration. This step will download the necessary provider plugins:
 
@@ -36,7 +40,7 @@ Before you begin, ensure you have the following installed:
     terraform init
     ```
 
-4. **Plan the deployment:**
+5. **Plan the deployment:**
 
     Generate an execution plan to see what resources Terraform will create or change:
 
@@ -44,7 +48,7 @@ Before you begin, ensure you have the following installed:
     terraform plan
     ```
 
-5. **Apply the configuration:**
+6. **Apply the configuration:**
 
     Apply the Terraform configuration to create the resources:
 
@@ -74,7 +78,7 @@ The following variables are defined in `variables.tf`:
 - `main.tf`: The main Terraform configuration file.
 - `variables.tf`: The file where variables are defined.
 - `terraform.tfvars`: A file to set the values for the variables (not included, you need to create it).
-- `startup_script.sh`: Your custom startup script (you need to provide this file).
+- `startup_script.sh`: Your custom startup script that sets up and starts your API (you need to provide this file).
 
 ## Cleaning Up
 
