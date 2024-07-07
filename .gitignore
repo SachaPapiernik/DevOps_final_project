@@ -1,0 +1,21 @@
+# Ignore Terraform state files
+terraform.tfstate
+terraform.tfstate.backup
+
+# Ignore the Terraform CLI configuration files
+.terraform/
+
+# Ignore any JSON files created by Terraform
+*.json
+
+# Ignore lock file, though some prefer to commit this
+.terraform.lock.hcl
+
+# Ignore tfvars files, which may contain sensitive data
+*.tfvars
+
+# Ignore editor swap files
+*~
+
+# Ignore logs and other artifacts
+*.log
