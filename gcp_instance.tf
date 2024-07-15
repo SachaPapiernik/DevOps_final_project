@@ -29,7 +29,7 @@ resource "google_compute_instance" "default" {
 
     metadata_startup_script = file(var.startup_script)
 
-    tags = ["http-server", "https-server"]
+    tags = ["http-server"]
 }
 
 resource "google_compute_firewall" "default" {
@@ -38,9 +38,9 @@ resource "google_compute_firewall" "default" {
 
     allow {
         protocol = "tcp"
-        ports    = ["80", "443", "8080"]
+        ports    = ["80"]
     }
 
     source_ranges = ["0.0.0.0/0"]
-    target_tags   = ["http-server", "https-server"]
+    target_tags   = ["http-server"]
 }

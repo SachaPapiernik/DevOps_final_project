@@ -38,7 +38,7 @@ variable "static_ip_name" {
 
 variable "firewall_name" {
   description = "The name of the firewall rule"
-  default     = "allow-http-https"
+  default     = "allow-http"
 }
 
 variable "startup_script" {

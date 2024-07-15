@@ -1,6 +1,6 @@
 # Terraform GCP Infrastructure for API Deployment
 
-This Terraform project sets up a basic Google Cloud Platform (GCP) infrastructure to deploy an API. It includes the provisioning of a static IP address, a compute instance running your API, and a firewall rule to allow HTTP and HTTPS traffic.
+This Terraform project sets up a basic Google Cloud Platform (GCP) infrastructure to deploy an API. It includes the provisioning of a static IP address, a compute instance running your API, and a firewall rule to allow HTTP.
 
 ## Prerequisites
 
